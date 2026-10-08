@@ -1,0 +1,76 @@
+env,n,wall_s,crashed,errors,flushes,flush_share,p50_ms,p99_ms,max_ms,shared_p99_ms,integrity,acked,missing,stale,rep
+openresearch,2,30.2,0,703,5,0.007,14.1,18.7,18.7,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 64
+Main freelist: freelist leaf count too big on page 61
+Main freelist: freelist leaf count too big on page 57
+On tree page 56 cell 0: 2nd reference to page 64
+On tree page 55 cell 0: Rowid 2 out of order
+Page 58 is never used
+Page 62 is never used
+Page 65 is never used",4,1,1,1
+openresearch,5,30.2,2,627,31,0.019,11.0,5169.4,5169.4,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 67
+Main freelist: freelist leaf count too big on page 63
+Main freelist: freelist leaf count too big on page 75
+Main freelist: freelist leaf count too big on page 69
+On tree page 58 cell 0: 2nd reference to page 67
+On tree page 57 cell 0: Rowid 4 out of order
+Page 60 is never used
+Page 66 is never used
+Page 68 is never used
+Page 74 is never used",6,2,1,1
+openresearch,10,30.2,2,2888,4,0.001,18.5,20.5,20.5,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 65
+Main freelist: freelist leaf count too big on page 82
+On tree page 55 cell 0: 2nd reference to page 65
+Page 73 is never used
+Page 77 is never used",11,1,2,1
+openresearch,20,30.3,0,4741,133,0.02,6.1,5178.7,10290.3,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 112
+Main freelist: freelist leaf count too big on page 94
+On tree page 62 cell 0: 2nd reference to page 112
+On tree page 55 cell 0: Rowid 16 out of order
+On tree page 26 cell 0: 2nd reference to page 82
+Page 75 is never used
+Page 83 is never used",24,1,3,1
+openresearch,50,30.5,1,1,6898,0.414,31.4,1433.5,4492.8,,ok,91,0,0,1
+openresearch,100,30.2,98,778,0,0.0,,,,,unreadable: database disk image is malformed,0,0,0,1
+openresearch,150,34.4,1,72,7961,0.159,99.4,3995.8,10426.7,,unreadable: database disk image is malformed,149,149,0,1
+openresearch,200,37.7,0,301,7852,0.118,111.3,5610.0,13722.2,,unreadable: database disk image is malformed,200,200,0,1
+openresearch,2,30.2,0,647,3,0.004,11.9,13.3,13.3,,unreadable: database disk image is malformed,4,4,0,2
+openresearch,5,30.2,3,769,0,0.0,,,,,unreadable: database disk image is malformed,1,1,0,2
+openresearch,10,30.2,1,3237,4,0.001,18.5,36.1,36.1,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 82
+Main freelist: freelist leaf count too big on page 68
+On tree page 62 cell 0: 2nd reference to page 82
+Page 66 is never used
+Page 81 is never used",12,1,2,2
+openresearch,20,30.3,1,4420,444,0.067,5.3,5161.9,5244.8,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 86
+Main freelist: freelist leaf count too big on page 72
+Main freelist: freelist leaf count too big on page 89
+On tree page 28 cell 9: Rowid 15 out of order
+On tree page 58 cell 0: 2nd reference to page 86
+Page 55 is never used
+Page 56 is never used
+Page 57 is never used
+Page 69 is never used
+Page 84 is never used
+Page 98 is never used",23,10,3,2
+openresearch,50,32.8,0,0,7359,0.442,26.6,1531.3,3446.2,,ok,96,0,0,2
+openresearch,100,33.4,0,6,6881,0.206,66.9,3387.2,6879.8,,ok,100,0,0,2
+openresearch,150,30.3,148,757,0,0.0,,,,,unreadable: malformed database schema (idx_chat_messages_session) - index idx_chat_messages_session already exists,0,0,0,2
+openresearch,200,42.5,1,404,7551,0.113,94.5,6049.2,10245.3,,unreadable: database disk image is malformed,199,199,0,2
+openresearch,2,30.2,1,382,0,0.0,,,,,unreadable: database disk image is malformed,0,0,0,3
+openresearch,5,38.2,1,466,211,0.127,14.0,26.6,5369.6,,unreadable: database disk image is malformed,8,8,0,3
+openresearch,10,30.3,0,2254,216,0.065,8.4,5341.2,10627.1,,"*** in database main ***
+Main freelist: freelist leaf count too big on page 81
+Main freelist: freelist leaf count too big on page 65
+On tree page 64 cell 0: 2nd reference to page 81
+Page 69 is never used
+Page 71 is never used",15,0,1,3
+openresearch,20,30.2,18,756,0,0.0,,,,,unreadable: database disk image is malformed,0,0,0,3
+openresearch,50,41.7,0,2,7408,0.444,28.0,1535.1,2812.0,,ok,95,0,1,3
+openresearch,100,30.3,97,1142,0,0.0,,,,,unreadable: database disk image is malformed,1,1,0,3
+openresearch,150,35.9,1,88,8744,0.175,99.7,3700.4,8467.3,,unreadable: database disk image is malformed,149,149,0,3
+openresearch,200,38.1,1,281,8384,0.126,115.2,5282.6,10826.7,,unreadable: database disk image is malformed,199,199,0,3

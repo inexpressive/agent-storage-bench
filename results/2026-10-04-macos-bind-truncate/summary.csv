@@ -1,0 +1,5 @@
+mode,label,fs,n,journal,interval_ms,duration_s,warmup_s,flushes,write_p50_ms,write_p90_ms,write_p99_ms,write_max_ms,write_mean_ms,late75_frac,late_own_frac,gap_p50_ms,gap_p99_ms,rate_ratio,debt_p50_ms,debt_max_ms,locked_errors,corrupt_errors,other_errors,gap_max_ms,sync_stalls,wall_s,loadavg_1m,clock_drift_s,agents_reported,integrity_bad_dbs,suspect_pause,attempt
+one-file,one-file,macos-bind,5,TRUNCATE,75,30.0,5.0,1560,4.704,10.801,67.902,470.786,7.476,0.00577,0.00577,75.05,276.262,0.936,2178.9,2375.2,0,0,0,491.1,0,31.2,22.95,0.001,5,0,False,1
+one-file,one-file,macos-bind,10,TRUNCATE,75,30.0,5.0,3058,5.928,27.916,244.084,769.384,17.96,0.04022,0.04022,75.021,254.336,0.9174,2586.6,3634.3,0,0,0,1051.7,0,31.3,14.76,0.001,10,0,False,1
+one-file,one-file,macos-bind,20,TRUNCATE,75,30.0,5.0,4473,7.18,116.938,954.962,3075.178,57.989,0.14465,0.14465,75.114,954.118,0.6709,8607.5,13919.4,0,0,0,3075.2,0,31.8,9.76,0.0,20,0,False,1
+one-file,one-file,macos-bind,50,TRUNCATE,75,30.0,5.0,4156,8.393,764.448,3333.784,5087.551,251.553,0.32459,0.32459,75.718,3389.547,0.2494,22799.2,25911.4,7,0,0,5087.6,0,32.9,6.09,0.001,50,0,True,2

@@ -1,0 +1,6 @@
+mode,label,fs,n,journal,interval_ms,duration_s,warmup_s,flushes,write_p50_ms,write_p90_ms,write_p99_ms,write_max_ms,write_mean_ms,late75_frac,late_own_frac,gap_p50_ms,gap_p99_ms,rate_ratio,debt_p50_ms,debt_max_ms,locked_errors,corrupt_errors,other_errors,gap_max_ms,sync_stalls,wall_s,loadavg_1m,clock_drift_s,agents_reported,integrity_bad_dbs,append_state_mismatches,suspect_pause,attempt
+one-file-append,one-file-append,container,20,WAL,75,30.0,5.0,6689,0.325,2.595,6.317,46.698,0.88,0.0,0.0,75.003,83.819,1.0033,0.0,0.0,0,0,0,90.9,0,31.5,1.05,-0.0,20,0,0,False,1
+one-file-append,one-file-append,container,50,WAL,75,30.0,5.0,16683,0.248,2.896,11.893,546.395,1.372,0.00126,0.00126,74.996,84.716,1.001,0.0,485.2,0,0,0,546.4,0,32.1,2.69,0.0,50,0,0,False,1
+one-file-append,one-file-append,container,100,WAL,75,30.0,5.0,33359,0.307,5.582,38.155,345.172,2.826,0.00279,0.00279,75.009,89.452,1.0008,31.6,406.7,0,0,0,345.2,0,33.1,3.89,-0.0,100,0,0,False,1
+one-file-append,one-file-append,container,150,WAL,75,30.0,5.0,48980,1.909,11.166,109.152,1433.602,6.688,0.01578,0.01578,75.021,136.589,0.9796,549.9,1925.5,0,0,0,1433.6,0,34.1,7.39,0.0,150,0,0,False,1
+one-file-append,one-file-append,container,200,WAL,75,30.0,5.0,63790,2.069,22.1,145.866,1548.921,11.607,0.0351,0.0351,75.025,167.958,0.9568,1485.2,6261.3,0,0,0,1548.9,0,35.1,8.14,0.0,200,0,0,False,1

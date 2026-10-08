@@ -1,0 +1,109 @@
+env,n,wall_s,crashed,errors,flushes,flush_share,p50_ms,p99_ms,max_ms,shared_p99_ms,integrity,acked,missing,stale,rep
+openhuman,2,30.3,0,118,99,,7.2,30.6,30.6,,row 1 missing from index idx_sessions_key,120,1,0,1
+openhuman,5,30.4,1,0,392,,12.0,44.4,54.8,,ok,472,0,0,1
+openhuman,10,30.5,1,0,887,,10.6,82.6,114.4,,ok,1067,0,0,1
+openhuman,20,36.2,0,116,1881,,9.0,151.9,360.7,,row 2 missing from index idx_tool_calls_session,2264,3,0,1
+openhuman,50,32.2,0,119,4776,,8.4,461.8,1763.1,,ok,5748,1,0,1
+openhuman,100,47.2,0,11483,28,,8.7,33.3,33.3,,"*** in database main ***
+Main freelist: size is 0 but should be 3
+On tree page 6914 cell 0: Rowid 2199023255553 out of order
+On tree page 6795 cell 282: 2nd reference to page 6921
+On tree page 6795 cell 281: 2nd reference to page 6916
+On tree page 6795 cell 280: 2nd reference to page 6911
+On tree page 6795 cell 279: 2nd reference to page 6906
+On tree page 6795 cell 278: 2nd reference to page 6900
+On tree page 6795 cell 277: 2nd reference to page 6864
+On tree page 6795 cell 276: 2nd reference to page 6885
+On tree page 6795 cell 275: 2nd reference to page 6895
+On tree page 6795 cell 274: 2nd reference to page 6894
+On tree page 6795 cell 273: 2nd reference to page 6889
+On tree page 6795 cell 272: 2nd reference to page 6884
+On tree page 6795 cell 271: 2nd reference to page 6879
+On tree page 6795 cell 270: 2nd reference to page 6851
+On tree page 6795 cell 269: 2nd reference to page 6856
+On tree page 6795 cell 268: 2nd reference to page 6869
+On tree page 6795 cell 267: 2nd reference to page 6874
+On tree page 6795 cell 266: 2nd reference to page 6868
+On tree page 6795 cell 265: 2nd reference to page 6863
+On tree page 6795 cell 264: 2nd reference to page 6858
+On tree page 6795 cell 263: 2nd reference to page 6853
+On tree page 6795 cell 262: 2nd reference to page 6847
+On tree page 6795 cell 261: 2nd reference to page 6830
+On tree page 6795 cell 260: 2nd reference to page 6743
+On tree page 6795 cell 259: 2nd reference to page 6826
+On tree page 6795 cell 258: 2nd reference to page 6840
+On tree page 6795 cell 257: 2nd reference to page 6839
+On tree page 6795 cell 256: 2nd reference to page 6834
+On tree page 6795 cell 255: 2nd reference to page 6828
+On tree page 6795 cell 254: 2nd reference to page 6822
+On tree page 6795 cell 253: 2nd reference to page 6799
+On tree page 6795 cell 252: 2nd reference to page 6796
+On tree page 6795 cell 251: 2nd reference to page 6809
+On tree page 6795 cell 250: 2nd reference to page 6816
+On tree page 6795 cell 249: 2nd reference to page 6811
+On tree page 6795 cell 248: 2nd reference to page 6806
+On tree page 6795 cell 247: 2nd reference to page 6801
+On tree page 6795 cell 246: 2nd reference to page 6795
+On tree page 6829 cell 246: Child page depth differs
+On tree page 6829 cell 245: Rowid 4258 out of order
+On tree page 6829 cell 245: 2nd reference to page 6754
+On tree page 6829 cell 245: Child page depth differs
+On tree page 6829 cell 244: 2nd reference to page 6780
+On tree page 6829 cell 243: 2nd reference to page 6790
+On tree page 6829 cell 242: 2nd reference to page 6789
+On tree page 6829 cell 241: 2nd reference to page 6784
+On tree page 6829 cell 240: 2nd reference to page 6779
+On tree page 6829 cell 239: 2nd reference to page 6774
+On tree page 6829 cell 238: 2nd reference to page 6759
+On tree page 6829 cell 237: 2nd reference to page 6751
+On tree page 6829 cell 236: 2nd reference to page 6764
+On tree page 6829 cell 235: 2nd reference to page 6769
+On tree page 6829 cell 234: 2nd reference to page 6763
+On tree page 6829 cell 233: 2nd reference to page 6758
+On tree page 6829 cell 232: 2nd reference to page 6753
+On tree page 6829 cell 231: 2nd reference to page 6748
+On tree page 6829 cell 230: 2nd reference to page 6742
+On tree page 6829 cell 229: 2nd reference to page 6718
+On tree page 6829 cell 228: 2nd reference to page 6669
+On tree page 6829 cell 227: 2nd reference to page 6731
+On tree page 6829 cell 226: 2nd reference to page 6738
+On tree page 6829 cell 225: 2nd reference to page 6733
+On tree page 6829 cell 224: 2nd reference to page 6728
+On tree page 6829 cell 223: 2nd reference to page 6723
+On tree page 6829 cell 222: 2nd reference to page 6717
+On tree page 6829 cell 221: 2nd reference to page 6687
+On tree page 6829 cell 220: 2nd reference to page 6703
+On tree page 6829 cell 219: 2nd reference to page 6716
+On tree page 6829 cell 218: 2nd reference to page 6712
+On tree page 6829 cell 217: 2nd reference to page 6707
+On tree page 6829 cell 216: 2nd reference to page 6702
+On tree page 6829 cell 215: 2nd reference to page 6697
+On tree page 6829 cell 214: 2nd reference to page 6691
+On tree page 6829 cell 213: 2nd reference to page 6664
+On tree page 6829 cell 212: 2nd reference to page 6674
+On tree page 6829 cell 211: 2nd reference to page 6684
+On tree page 6829 cell 210: 2nd reference to page 6683
+On tree page 6829 cell 209: 2nd reference to page 6678
+On tree page 6829 cell 208: 2nd reference to page 6673
+On tree page 6829 cell 207: 2nd reference to page 6668
+On tree page 6829 cell 206: 2nd reference to page 6648
+On tree page 6829 cell 205: 2nd reference to page 6645
+On tree page 6829 cell 204: 2nd reference to page 6658
+On tree page 6829 cell 203: 2nd reference to page 6663
+On tree page 6829 cell 202: 2nd reference to page 6657
+On tree page 6829 cell 201: 2nd reference to page 6652
+On tree page 6829 cell 200: 2nd reference to page 6647
+On tree page 6829 cell 199: 2nd reference to page 6642
+On tree page 6829 cell 198: 2nd reference to page 6636
+On tree page 6829 cell 197: 2nd reference to page 6619
+On tree page 6829 cell 196: 2nd reference to page 6565
+On tree page 6829 cell 195: 2nd reference to page 6616
+On tree page 6829 cell 194: 2nd reference to page 6629
+On tree page 6829 cell 193: 2nd reference to page 6628
+On tree page 6829 cell 192: 2nd reference to page 6623
+On tree page 6829 cell 191: 2nd reference to page 6618
+On tree page 6829 cell 190: 2nd reference to page 6612
+On tree page 6829 cell 189: 2nd reference to page 6590
+On tree page 6829 cell 188: 2nd reference to page 6587",241,40,0,1
+openhuman,150,38.1,0,171,6883,,24.8,4124.2,7763.6,,ok,8284,1,0,1
+openhuman,200,46.9,0,403,6634,,25.0,4733.8,10094.6,,ok,8408,1,0,1

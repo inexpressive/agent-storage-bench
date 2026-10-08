@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 905" width="1120" height="905" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
+<style>
+svg{--bg:#fcfcfb;--ink:#1f1f1e;--ink2:#5f5e58;--grid:#e6e5e0;--ref:#9a998f;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100}
+@media (prefers-color-scheme: dark){svg{--bg:#1a1a19;--ink:#ffffff;--ink2:#c3c2b7;
+--grid:#33332f;--ref:#7d7c74;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500}}
+.bg{fill:var(--bg)} .t{fill:var(--ink)} .t2{fill:var(--ink2)}
+.grid{stroke:var(--grid);stroke-width:1} .ref{stroke:var(--ref);stroke-width:1.5;stroke-dasharray:6 4}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.dash{stroke-dasharray:5 4}
+.pt{stroke:var(--bg);stroke-width:2}
+</style>
+<rect class="bg" width="1120" height="905"/>
+<text class="t" x="70" y="34" font-size="20" font-weight="600">Запись стриминг-вывода: задержка и опоздания против числа агентов N</text>
+<text class="t2" x="70" y="56" font-size="13">Синтетика по шаблону OpenResearch (сброс полного сообщения раз в 75 мс). Сплошная — p99, пунктир — p50. Серая штриховая — 75 мс.</text>
+<line x1="70" y1="82" x2="94" y2="82" class="ln" style="stroke:var(--s1)"/>
+<circle cx="82" cy="82" r="4" class="pt" style="fill:var(--s1)"/>
+<text class="t" x="102" y="86" font-size="13">one-file (общий orx.db)</text>
+<line x1="316" y1="82" x2="340" y2="82" class="ln" style="stroke:var(--s2)"/>
+<circle cx="328" cy="82" r="4" class="pt" style="fill:var(--s2)"/>
+<text class="t" x="348" y="86" font-size="13">file-per-session</text>
+<line x1="506" y1="82" x2="530" y2="82" class="ln" style="stroke:var(--s3)"/>
+<circle cx="518" cy="82" r="4" class="pt" style="fill:var(--s3)"/>
+<text class="t" x="538" y="86" font-size="13">json-rename, 250 мс</text>
+<line x1="720" y1="82" x2="744" y2="82" class="ln" style="stroke:var(--s4)"/>
+<circle cx="732" cy="82" r="4" class="pt" style="fill:var(--s4)"/>
+<text class="t" x="752" y="86" font-size="13">json-rename, 75 мс</text>
+<text class="t" x="70.0" y="117.0" font-size="16" font-weight="700">ФС контейнера (ext4 в VM Docker Desktop)</text>
+<text class="t" x="70.0" y="163.0" font-size="14" font-weight="600">Задержка записи, мс (лог. шкала)</text>
+<line class="grid" x1="70.0" x2="535.0" y1="450.0" y2="450.0"/>
+<text class="t2" x="62.0" y="454.0" font-size="12" text-anchor="end">0.01</text>
+<line class="grid" x1="70.0" x2="535.0" y1="395.0" y2="395.0"/>
+<text class="t2" x="62.0" y="399.0" font-size="12" text-anchor="end">0.1</text>
+<line class="grid" x1="70.0" x2="535.0" y1="340.0" y2="340.0"/>
+<text class="t2" x="62.0" y="344.0" font-size="12" text-anchor="end">1</text>
+<line class="grid" x1="70.0" x2="535.0" y1="285.0" y2="285.0"/>
+<text class="t2" x="62.0" y="289.0" font-size="12" text-anchor="end">10</text>
+<line class="grid" x1="70.0" x2="535.0" y1="230.0" y2="230.0"/>
+<text class="t2" x="62.0" y="234.0" font-size="12" text-anchor="end">100</text>
+<line class="grid" x1="70.0" x2="535.0" y1="175.0" y2="175.0"/>
+<text class="t2" x="62.0" y="179.0" font-size="12" text-anchor="end">1000</text>
+<line class="ref" x1="70.0" x2="535.0" y1="236.9" y2="236.9"/>
+<text class="t2" x="531.0" y="230.9" font-size="12" text-anchor="end">75 мс</text>
+<text class="t2" x="90.0" y="468.0" font-size="12" text-anchor="middle">1</text>
+<text class="t2" x="175.0" y="468.0" font-size="12" text-anchor="middle">5</text>
+<text class="t2" x="260.0" y="468.0" font-size="12" text-anchor="middle">10</text>
+<text class="t2" x="345.0" y="468.0" font-size="12" text-anchor="middle">20</text>
+<text class="t2" x="430.0" y="468.0" font-size="12" text-anchor="middle">50</text>
+<text class="t2" x="515.0" y="468.0" font-size="12" text-anchor="middle">100</text>
+<text class="t2" x="302.5" y="486.0" font-size="12" text-anchor="middle">N агентов</text>
+<path class="ln" style="stroke:var(--s1)" d="M90.0,294.3 L175.0,290.9 L260.0,287.8 L345.0,276.5 L430.0,248.3 L515.0,242.0"/>
+<circle class="pt" cx="90.0" cy="294.3" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=1: p50 0.5 мс, p99 6.8 мс, max 18 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 335</title></circle>
+<circle class="pt" cx="175.0" cy="290.9" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=5: p50 0.5 мс, p99 7.8 мс, max 13 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1672</title></circle>
+<circle class="pt" cx="260.0" cy="287.8" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=10: p50 0.5 мс, p99 8.9 мс, max 16 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3343</title></circle>
+<circle class="pt" cx="345.0" cy="276.5" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=20: p50 0.4 мс, p99 14.3 мс, max 81 мс, &gt;75 мс 0.01%, locked 0, malformed 0 из 6687</title></circle>
+<circle class="pt" cx="430.0" cy="248.3" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=50: p50 0.3 мс, p99 46.5 мс, max 820 мс, &gt;75 мс 0.66%, locked 0, malformed 0 из 16509</title></circle>
+<circle class="pt" cx="515.0" cy="242.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=100: p50 1.9 мс, p99 60.4 мс, max 640 мс, &gt;75 мс 0.78%, locked 0, malformed 0 из 33198</title></circle>
+<path class="ln dash" style="stroke:var(--s1)" d="M90.0,358.7 L175.0,355.1 L260.0,356.6 L345.0,359.2 L430.0,371.0 L515.0,325.0"/>
+<path class="ln" style="stroke:var(--s2)" d="M90.0,284.1 L175.0,285.5 L260.0,285.6 L345.0,292.4 L430.0,281.6 L515.0,289.4"/>
+<circle class="pt" cx="90.0" cy="284.1" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=1: p50 0.5 мс, p99 10.4 мс, max 12 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 335</title></circle>
+<circle class="pt" cx="175.0" cy="285.5" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=5: p50 0.4 мс, p99 9.8 мс, max 15 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1673</title></circle>
+<circle class="pt" cx="260.0" cy="285.6" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=10: p50 0.4 мс, p99 9.8 мс, max 15 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3344</title></circle>
+<circle class="pt" cx="345.0" cy="292.4" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=20: p50 0.3 мс, p99 7.3 мс, max 50 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 6689</title></circle>
+<circle class="pt" cx="430.0" cy="281.6" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=50: p50 0.1 мс, p99 11.5 мс, max 134 мс, &gt;75 мс 0.12%, locked 0, malformed 0 из 16642</title></circle>
+<circle class="pt" cx="515.0" cy="289.4" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=100: p50 0.1 мс, p99 8.3 мс, max 83 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 33404</title></circle>
+<path class="ln dash" style="stroke:var(--s2)" d="M90.0,356.4 L175.0,363.0 L260.0,363.2 L345.0,369.5 L430.0,389.7 L515.0,388.2"/>
+<path class="ln" style="stroke:var(--s3)" d="M90.0,306.8 L175.0,308.9 L260.0,306.4 L345.0,303.8 L430.0,311.5 L515.0,315.2"/>
+<circle class="pt" cx="90.0" cy="306.8" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=1: p50 1.9 мс, p99 4.0 мс, max 4 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 101</title></circle>
+<circle class="pt" cx="175.0" cy="308.9" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=5: p50 1.2 мс, p99 3.7 мс, max 11 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 505</title></circle>
+<circle class="pt" cx="260.0" cy="306.4" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=10: p50 1.2 мс, p99 4.1 мс, max 12 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1010</title></circle>
+<circle class="pt" cx="345.0" cy="303.8" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=20: p50 0.5 мс, p99 4.5 мс, max 52 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 2036</title></circle>
+<circle class="pt" cx="430.0" cy="311.5" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=50: p50 0.5 мс, p99 3.3 мс, max 23 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 5050</title></circle>
+<circle class="pt" cx="515.0" cy="315.2" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=100: p50 0.4 мс, p99 2.8 мс, max 18 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 10100</title></circle>
+<path class="ln dash" style="stroke:var(--s3)" d="M90.0,324.7 L175.0,334.8 L260.0,335.0 L345.0,354.3 L430.0,356.4 L515.0,361.8"/>
+<path class="ln" style="stroke:var(--s4)" d="M90.0,305.1 L175.0,308.8 L260.0,306.6 L345.0,279.7 L430.0,295.8 L515.0,281.8"/>
+<circle class="pt" cx="90.0" cy="305.1" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=1: p50 1.3 мс, p99 4.3 мс, max 7 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 335</title></circle>
+<circle class="pt" cx="175.0" cy="308.8" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=5: p50 1.0 мс, p99 3.7 мс, max 16 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1673</title></circle>
+<circle class="pt" cx="260.0" cy="306.6" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=10: p50 0.9 мс, p99 4.1 мс, max 14 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3343</title></circle>
+<circle class="pt" cx="345.0" cy="279.7" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=20: p50 0.4 мс, p99 12.5 мс, max 78 мс, &gt;75 мс 0.20%, locked 0, malformed 0 из 6628</title></circle>
+<circle class="pt" cx="430.0" cy="295.8" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=50: p50 0.3 мс, p99 6.4 мс, max 174 мс, &gt;75 мс 0.24%, locked 0, malformed 0 из 16639</title></circle>
+<circle class="pt" cx="515.0" cy="281.8" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=100: p50 0.2 мс, p99 11.4 мс, max 92 мс, &gt;75 мс 0.03%, locked 0, malformed 0 из 33278</title></circle>
+<path class="ln dash" style="stroke:var(--s4)" d="M90.0,334.0 L175.0,340.1 L260.0,341.7 L345.0,363.6 L430.0,372.6 L515.0,376.1"/>
+<text class="t" x="625.0" y="163.0" font-size="14" font-weight="600">Доля записей дольше 75 мс</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="450.0" y2="450.0"/>
+<text class="t2" x="617.0" y="454.0" font-size="12" text-anchor="end">0%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="381.2" y2="381.2"/>
+<text class="t2" x="617.0" y="385.2" font-size="12" text-anchor="end">25%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="312.5" y2="312.5"/>
+<text class="t2" x="617.0" y="316.5" font-size="12" text-anchor="end">50%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="243.8" y2="243.8"/>
+<text class="t2" x="617.0" y="247.8" font-size="12" text-anchor="end">75%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="175.0" y2="175.0"/>
+<text class="t2" x="617.0" y="179.0" font-size="12" text-anchor="end">100%</text>
+<text class="t2" x="645.0" y="468.0" font-size="12" text-anchor="middle">1</text>
+<text class="t2" x="730.0" y="468.0" font-size="12" text-anchor="middle">5</text>
+<text class="t2" x="815.0" y="468.0" font-size="12" text-anchor="middle">10</text>
+<text class="t2" x="900.0" y="468.0" font-size="12" text-anchor="middle">20</text>
+<text class="t2" x="985.0" y="468.0" font-size="12" text-anchor="middle">50</text>
+<text class="t2" x="1070.0" y="468.0" font-size="12" text-anchor="middle">100</text>
+<text class="t2" x="857.5" y="486.0" font-size="12" text-anchor="middle">N агентов</text>
+<path class="ln" style="stroke:var(--s1)" d="M645.0,450.0 L730.0,450.0 L815.0,450.0 L900.0,450.0 L985.0,448.2 L1070.0,447.9"/>
+<circle class="pt" cx="645.0" cy="450.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=1: p50 0.5 мс, p99 6.8 мс, max 18 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 335</title></circle>
+<circle class="pt" cx="730.0" cy="450.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=5: p50 0.5 мс, p99 7.8 мс, max 13 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1672</title></circle>
+<circle class="pt" cx="815.0" cy="450.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=10: p50 0.5 мс, p99 8.9 мс, max 16 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3343</title></circle>
+<circle class="pt" cx="900.0" cy="450.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=20: p50 0.4 мс, p99 14.3 мс, max 81 мс, &gt;75 мс 0.01%, locked 0, malformed 0 из 6687</title></circle>
+<circle class="pt" cx="985.0" cy="448.2" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=50: p50 0.3 мс, p99 46.5 мс, max 820 мс, &gt;75 мс 0.66%, locked 0, malformed 0 из 16509</title></circle>
+<circle class="pt" cx="1070.0" cy="447.9" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=100: p50 1.9 мс, p99 60.4 мс, max 640 мс, &gt;75 мс 0.78%, locked 0, malformed 0 из 33198</title></circle>
+<path class="ln" style="stroke:var(--s2)" d="M645.0,450.0 L730.0,450.0 L815.0,450.0 L900.0,450.0 L985.0,449.7 L1070.0,450.0"/>
+<circle class="pt" cx="645.0" cy="450.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=1: p50 0.5 мс, p99 10.4 мс, max 12 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 335</title></circle>
+<circle class="pt" cx="730.0" cy="450.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=5: p50 0.4 мс, p99 9.8 мс, max 15 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1673</title></circle>
+<circle class="pt" cx="815.0" cy="450.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=10: p50 0.4 мс, p99 9.8 мс, max 15 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3344</title></circle>
+<circle class="pt" cx="900.0" cy="450.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=20: p50 0.3 мс, p99 7.3 мс, max 50 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 6689</title></circle>
+<circle class="pt" cx="985.0" cy="449.7" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=50: p50 0.1 мс, p99 11.5 мс, max 134 мс, &gt;75 мс 0.12%, locked 0, malformed 0 из 16642</title></circle>
+<circle class="pt" cx="1070.0" cy="450.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=100: p50 0.1 мс, p99 8.3 мс, max 83 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 33404</title></circle>
+<path class="ln" style="stroke:var(--s3)" d="M645.0,450.0 L730.0,450.0 L815.0,450.0 L900.0,450.0 L985.0,450.0 L1070.0,450.0"/>
+<circle class="pt" cx="645.0" cy="450.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=1: p50 1.9 мс, p99 4.0 мс, max 4 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 101</title></circle>
+<circle class="pt" cx="730.0" cy="450.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=5: p50 1.2 мс, p99 3.7 мс, max 11 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 505</title></circle>
+<circle class="pt" cx="815.0" cy="450.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=10: p50 1.2 мс, p99 4.1 мс, max 12 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1010</title></circle>
+<circle class="pt" cx="900.0" cy="450.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=20: p50 0.5 мс, p99 4.5 мс, max 52 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 2036</title></circle>
+<circle class="pt" cx="985.0" cy="450.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=50: p50 0.5 мс, p99 3.3 мс, max 23 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 5050</title></circle>
+<circle class="pt" cx="1070.0" cy="450.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=100: p50 0.4 мс, p99 2.8 мс, max 18 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 10100</title></circle>
+<path class="ln" style="stroke:var(--s4)" d="M645.0,450.0 L730.0,450.0 L815.0,450.0 L900.0,449.5 L985.0,449.3 L1070.0,449.9"/>
+<circle class="pt" cx="645.0" cy="450.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=1: p50 1.3 мс, p99 4.3 мс, max 7 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 335</title></circle>
+<circle class="pt" cx="730.0" cy="450.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=5: p50 1.0 мс, p99 3.7 мс, max 16 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 1673</title></circle>
+<circle class="pt" cx="815.0" cy="450.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=10: p50 0.9 мс, p99 4.1 мс, max 14 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3343</title></circle>
+<circle class="pt" cx="900.0" cy="449.5" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=20: p50 0.4 мс, p99 12.5 мс, max 78 мс, &gt;75 мс 0.20%, locked 0, malformed 0 из 6628</title></circle>
+<circle class="pt" cx="985.0" cy="449.3" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=50: p50 0.3 мс, p99 6.4 мс, max 174 мс, &gt;75 мс 0.24%, locked 0, malformed 0 из 16639</title></circle>
+<circle class="pt" cx="1070.0" cy="449.9" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=100: p50 0.2 мс, p99 11.4 мс, max 92 мс, &gt;75 мс 0.03%, locked 0, malformed 0 из 33278</title></circle>
+<text class="t" x="70.0" y="512.0" font-size="16" font-weight="700">bind-mount с macOS (Docker Desktop)</text>
+<text class="t" x="70.0" y="534.0" font-size="13" font-weight="600">⚠ one-file: 58–98 % записей при N≥5 — «database disk image is malformed»; их задержки не сравнимы (ошибка возвращается быстро)</text>
+<text class="t" x="70.0" y="558.0" font-size="14" font-weight="600">Задержка записи, мс (лог. шкала)</text>
+<line class="grid" x1="70.0" x2="535.0" y1="845.0" y2="845.0"/>
+<text class="t2" x="62.0" y="849.0" font-size="12" text-anchor="end">0.01</text>
+<line class="grid" x1="70.0" x2="535.0" y1="790.0" y2="790.0"/>
+<text class="t2" x="62.0" y="794.0" font-size="12" text-anchor="end">0.1</text>
+<line class="grid" x1="70.0" x2="535.0" y1="735.0" y2="735.0"/>
+<text class="t2" x="62.0" y="739.0" font-size="12" text-anchor="end">1</text>
+<line class="grid" x1="70.0" x2="535.0" y1="680.0" y2="680.0"/>
+<text class="t2" x="62.0" y="684.0" font-size="12" text-anchor="end">10</text>
+<line class="grid" x1="70.0" x2="535.0" y1="625.0" y2="625.0"/>
+<text class="t2" x="62.0" y="629.0" font-size="12" text-anchor="end">100</text>
+<line class="grid" x1="70.0" x2="535.0" y1="570.0" y2="570.0"/>
+<text class="t2" x="62.0" y="574.0" font-size="12" text-anchor="end">1000</text>
+<line class="ref" x1="70.0" x2="535.0" y1="631.9" y2="631.9"/>
+<text class="t2" x="531.0" y="625.9" font-size="12" text-anchor="end">75 мс</text>
+<text class="t2" x="90.0" y="863.0" font-size="12" text-anchor="middle">1</text>
+<text class="t2" x="175.0" y="863.0" font-size="12" text-anchor="middle">5</text>
+<text class="t2" x="260.0" y="863.0" font-size="12" text-anchor="middle">10</text>
+<text class="t2" x="345.0" y="863.0" font-size="12" text-anchor="middle">20</text>
+<text class="t2" x="430.0" y="863.0" font-size="12" text-anchor="middle">50</text>
+<text class="t2" x="515.0" y="863.0" font-size="12" text-anchor="middle">100</text>
+<text class="t2" x="302.5" y="881.0" font-size="12" text-anchor="middle">N агентов</text>
+<path class="ln" style="stroke:var(--s1)" d="M90.0,665.1 L175.0,655.4 L260.0,648.9 L345.0,653.5 L430.0,661.0 L515.0,596.8"/>
+<circle class="pt" cx="90.0" cy="665.1" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=1: p50 3.7 мс, p99 18.6 мс, max 52 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 331</title></circle>
+<circle class="pt" cx="175.0" cy="655.4" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=5: p50 0.4 мс, p99 28.0 мс, max 5397 мс, &gt;75 мс 0.26%, locked 2, malformed 668 из 1143</title></circle>
+<circle class="pt" cx="260.0" cy="648.9" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=10: p50 0.3 мс, p99 36.7 мс, max 259 мс, &gt;75 мс 0.36%, locked 0, malformed 2015 из 3317</title></circle>
+<circle class="pt" cx="345.0" cy="653.5" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=20: p50 0.1 мс, p99 30.3 мс, max 340 мс, &gt;75 мс 0.35%, locked 0, malformed 6268 из 6595</title></circle>
+<circle class="pt" cx="430.0" cy="661.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=50: p50 0.1 мс, p99 22.2 мс, max 490 мс, &gt;75 мс 0.34%, locked 0, malformed 15719 из 16053</title></circle>
+<circle class="pt" cx="515.0" cy="596.8" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=100: p50 0.1 мс, p99 325.4 мс, max 987 мс, &gt;75 мс 1.69%, locked 0, malformed 21946 из 29306</title></circle>
+<path class="ln dash" style="stroke:var(--s1)" d="M90.0,703.6 L175.0,754.6 L260.0,766.7 L345.0,784.3 L430.0,791.2 L515.0,796.9"/>
+<path class="ln" style="stroke:var(--s2)" d="M90.0,661.8 L175.0,660.5 L260.0,642.1 L345.0,665.9 L430.0,582.3 L515.0,589.3"/>
+<circle class="pt" cx="90.0" cy="661.8" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=1: p50 3.8 мс, p99 21.4 мс, max 55 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 329</title></circle>
+<circle class="pt" cx="175.0" cy="660.5" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=5: p50 5.3 мс, p99 22.6 мс, max 92 мс, &gt;75 мс 0.06%, locked 0, malformed 0 из 1662</title></circle>
+<circle class="pt" cx="260.0" cy="642.1" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=10: p50 7.8 мс, p99 48.9 мс, max 141 мс, &gt;75 мс 0.33%, locked 0, malformed 0 из 3321</title></circle>
+<circle class="pt" cx="345.0" cy="665.9" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=20: p50 3.9 мс, p99 18.1 мс, max 63 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 6689</title></circle>
+<circle class="pt" cx="430.0" cy="582.3" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=50: p50 34.4 мс, p99 597.8 мс, max 913 мс, &gt;75 мс 28.83%, locked 0, malformed 0 из 11082</title></circle>
+<circle class="pt" cx="515.0" cy="589.3" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=100: p50 128.4 мс, p99 445.6 мс, max 571 мс, &gt;75 мс 62.02%, locked 0, malformed 0 из 15557</title></circle>
+<path class="ln dash" style="stroke:var(--s2)" d="M90.0,702.8 L175.0,695.1 L260.0,686.0 L345.0,702.2 L430.0,650.5 L515.0,619.0"/>
+<path class="ln" style="stroke:var(--s3)" d="M90.0,669.1 L175.0,648.5 L260.0,641.3 L345.0,651.3 L430.0,611.0 L515.0,661.2"/>
+<circle class="pt" cx="90.0" cy="669.1" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=1: p50 4.8 мс, p99 15.8 мс, max 37 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 100</title></circle>
+<circle class="pt" cx="175.0" cy="648.5" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=5: p50 4.4 мс, p99 37.4 мс, max 55 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 506</title></circle>
+<circle class="pt" cx="260.0" cy="641.3" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=10: p50 3.3 мс, p99 50.5 мс, max 127 мс, &gt;75 мс 0.29%, locked 0, malformed 0 из 1017</title></circle>
+<circle class="pt" cx="345.0" cy="651.3" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=20: p50 8.2 мс, p99 33.2 мс, max 267 мс, &gt;75 мс 0.25%, locked 0, malformed 0 из 2000</title></circle>
+<circle class="pt" cx="430.0" cy="611.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=50: p50 20.3 мс, p99 179.5 мс, max 233 мс, &gt;75 мс 4.71%, locked 0, malformed 0 из 4928</title></circle>
+<circle class="pt" cx="515.0" cy="661.2" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=100: p50 2.9 мс, p99 22.0 мс, max 67 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 10100</title></circle>
+<path class="ln dash" style="stroke:var(--s3)" d="M90.0,697.6 L175.0,699.8 L260.0,706.6 L345.0,684.7 L430.0,663.1 L515.0,709.7"/>
+<path class="ln" style="stroke:var(--s4)" d="M90.0,656.9 L175.0,649.5 L260.0,642.5 L345.0,651.4 L430.0,631.3 L515.0,596.9"/>
+<circle class="pt" cx="90.0" cy="656.9" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=1: p50 4.4 мс, p99 26.3 мс, max 49 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 325</title></circle>
+<circle class="pt" cx="175.0" cy="649.5" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=5: p50 5.1 мс, p99 35.9 мс, max 91 мс, &gt;75 мс 0.72%, locked 0, malformed 0 из 1665</title></circle>
+<circle class="pt" cx="260.0" cy="642.5" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=10: p50 6.3 мс, p99 48.0 мс, max 65 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3320</title></circle>
+<circle class="pt" cx="345.0" cy="651.4" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=20: p50 12.3 мс, p99 33.2 мс, max 64 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 6570</title></circle>
+<circle class="pt" cx="430.0" cy="631.3" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=50: p50 5.7 мс, p99 76.7 мс, max 404 мс, &gt;75 мс 1.05%, locked 0, malformed 0 из 16351</title></circle>
+<circle class="pt" cx="515.0" cy="596.9" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=100: p50 25.9 мс, p99 323.9 мс, max 710 мс, &gt;75 мс 10.69%, locked 0, malformed 0 из 26942</title></circle>
+<path class="ln dash" style="stroke:var(--s4)" d="M90.0,699.7 L175.0,696.1 L260.0,691.1 L345.0,675.1 L430.0,693.3 L515.0,657.3"/>
+<text class="t" x="625.0" y="558.0" font-size="14" font-weight="600">Доля записей дольше 75 мс</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="845.0" y2="845.0"/>
+<text class="t2" x="617.0" y="849.0" font-size="12" text-anchor="end">0%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="776.2" y2="776.2"/>
+<text class="t2" x="617.0" y="780.2" font-size="12" text-anchor="end">25%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="707.5" y2="707.5"/>
+<text class="t2" x="617.0" y="711.5" font-size="12" text-anchor="end">50%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="638.8" y2="638.8"/>
+<text class="t2" x="617.0" y="642.8" font-size="12" text-anchor="end">75%</text>
+<line class="grid" x1="625.0" x2="1090.0" y1="570.0" y2="570.0"/>
+<text class="t2" x="617.0" y="574.0" font-size="12" text-anchor="end">100%</text>
+<text class="t2" x="645.0" y="863.0" font-size="12" text-anchor="middle">1</text>
+<text class="t2" x="730.0" y="863.0" font-size="12" text-anchor="middle">5</text>
+<text class="t2" x="815.0" y="863.0" font-size="12" text-anchor="middle">10</text>
+<text class="t2" x="900.0" y="863.0" font-size="12" text-anchor="middle">20</text>
+<text class="t2" x="985.0" y="863.0" font-size="12" text-anchor="middle">50</text>
+<text class="t2" x="1070.0" y="863.0" font-size="12" text-anchor="middle">100</text>
+<text class="t2" x="857.5" y="881.0" font-size="12" text-anchor="middle">N агентов</text>
+<path class="ln" style="stroke:var(--s1)" d="M645.0,845.0 L730.0,844.3 L815.0,844.0 L900.0,844.0 L985.0,844.1 L1070.0,840.4"/>
+<circle class="pt" cx="645.0" cy="845.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=1: p50 3.7 мс, p99 18.6 мс, max 52 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 331</title></circle>
+<circle class="pt" cx="730.0" cy="844.3" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=5: p50 0.4 мс, p99 28.0 мс, max 5397 мс, &gt;75 мс 0.26%, locked 2, malformed 668 из 1143</title></circle>
+<circle class="pt" cx="815.0" cy="844.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=10: p50 0.3 мс, p99 36.7 мс, max 259 мс, &gt;75 мс 0.36%, locked 0, malformed 2015 из 3317</title></circle>
+<circle class="pt" cx="900.0" cy="844.0" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=20: p50 0.1 мс, p99 30.3 мс, max 340 мс, &gt;75 мс 0.35%, locked 0, malformed 6268 из 6595</title></circle>
+<circle class="pt" cx="985.0" cy="844.1" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=50: p50 0.1 мс, p99 22.2 мс, max 490 мс, &gt;75 мс 0.34%, locked 0, malformed 15719 из 16053</title></circle>
+<circle class="pt" cx="1070.0" cy="840.4" r="4.5" style="fill:var(--s1)"><title>one-file (общий orx.db), N=100: p50 0.1 мс, p99 325.4 мс, max 987 мс, &gt;75 мс 1.69%, locked 0, malformed 21946 из 29306</title></circle>
+<path class="ln" style="stroke:var(--s2)" d="M645.0,845.0 L730.0,844.8 L815.0,844.1 L900.0,845.0 L985.0,765.7 L1070.0,674.5"/>
+<circle class="pt" cx="645.0" cy="845.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=1: p50 3.8 мс, p99 21.4 мс, max 55 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 329</title></circle>
+<circle class="pt" cx="730.0" cy="844.8" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=5: p50 5.3 мс, p99 22.6 мс, max 92 мс, &gt;75 мс 0.06%, locked 0, malformed 0 из 1662</title></circle>
+<circle class="pt" cx="815.0" cy="844.1" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=10: p50 7.8 мс, p99 48.9 мс, max 141 мс, &gt;75 мс 0.33%, locked 0, malformed 0 из 3321</title></circle>
+<circle class="pt" cx="900.0" cy="845.0" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=20: p50 3.9 мс, p99 18.1 мс, max 63 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 6689</title></circle>
+<circle class="pt" cx="985.0" cy="765.7" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=50: p50 34.4 мс, p99 597.8 мс, max 913 мс, &gt;75 мс 28.83%, locked 0, malformed 0 из 11082</title></circle>
+<circle class="pt" cx="1070.0" cy="674.5" r="4.5" style="fill:var(--s2)"><title>file-per-session, N=100: p50 128.4 мс, p99 445.6 мс, max 571 мс, &gt;75 мс 62.02%, locked 0, malformed 0 из 15557</title></circle>
+<path class="ln" style="stroke:var(--s3)" d="M645.0,845.0 L730.0,845.0 L815.0,844.2 L900.0,844.3 L985.0,832.1 L1070.0,845.0"/>
+<circle class="pt" cx="645.0" cy="845.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=1: p50 4.8 мс, p99 15.8 мс, max 37 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 100</title></circle>
+<circle class="pt" cx="730.0" cy="845.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=5: p50 4.4 мс, p99 37.4 мс, max 55 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 506</title></circle>
+<circle class="pt" cx="815.0" cy="844.2" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=10: p50 3.3 мс, p99 50.5 мс, max 127 мс, &gt;75 мс 0.29%, locked 0, malformed 0 из 1017</title></circle>
+<circle class="pt" cx="900.0" cy="844.3" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=20: p50 8.2 мс, p99 33.2 мс, max 267 мс, &gt;75 мс 0.25%, locked 0, malformed 0 из 2000</title></circle>
+<circle class="pt" cx="985.0" cy="832.1" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=50: p50 20.3 мс, p99 179.5 мс, max 233 мс, &gt;75 мс 4.71%, locked 0, malformed 0 из 4928</title></circle>
+<circle class="pt" cx="1070.0" cy="845.0" r="4.5" style="fill:var(--s3)"><title>json-rename, 250 мс, N=100: p50 2.9 мс, p99 22.0 мс, max 67 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 10100</title></circle>
+<path class="ln" style="stroke:var(--s4)" d="M645.0,845.0 L730.0,843.0 L815.0,845.0 L900.0,845.0 L985.0,842.1 L1070.0,815.6"/>
+<circle class="pt" cx="645.0" cy="845.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=1: p50 4.4 мс, p99 26.3 мс, max 49 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 325</title></circle>
+<circle class="pt" cx="730.0" cy="843.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=5: p50 5.1 мс, p99 35.9 мс, max 91 мс, &gt;75 мс 0.72%, locked 0, malformed 0 из 1665</title></circle>
+<circle class="pt" cx="815.0" cy="845.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=10: p50 6.3 мс, p99 48.0 мс, max 65 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 3320</title></circle>
+<circle class="pt" cx="900.0" cy="845.0" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=20: p50 12.3 мс, p99 33.2 мс, max 64 мс, &gt;75 мс 0.00%, locked 0, malformed 0 из 6570</title></circle>
+<circle class="pt" cx="985.0" cy="842.1" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=50: p50 5.7 мс, p99 76.7 мс, max 404 мс, &gt;75 мс 1.05%, locked 0, malformed 0 из 16351</title></circle>
+<circle class="pt" cx="1070.0" cy="815.6" r="4.5" style="fill:var(--s4)"><title>json-rename, 75 мс, N=100: p50 25.9 мс, p99 323.9 мс, max 710 мс, &gt;75 мс 10.69%, locked 0, malformed 0 из 26942</title></circle>
+</svg>

@@ -1,0 +1,9 @@
+mode,label,fs,n,journal,interval_ms,duration_s,warmup_s,flushes,write_p50_ms,write_p90_ms,write_p99_ms,write_max_ms,write_mean_ms,late75_frac,late_own_frac,gap_p50_ms,gap_p99_ms,rate_ratio,debt_p50_ms,debt_max_ms,locked_errors,corrupt_errors,other_errors,gap_max_ms,sync_stalls,wall_s,loadavg_1m,clock_drift_s,agents_reported,integrity_bad_dbs,acked_rows,acked_missing,acked_stale,silent_loss_frac,suspect_pause,attempt
+one-file,one-file,macos-bind,1,WAL,75,30.0,5.0,334,5.351,9.75,14.439,18.146,5.724,0.0,0.0,74.809,86.391,1.002,0.0,0.0,0,0,0,88.4,0,31.1,1.91,-0.001,1,0,3,0,0,0.0,False,1
+file-per-session,file-per-session,macos-bind,1,WAL,75,30.0,5.0,335,5.279,9.328,15.424,27.288,5.753,0.0,0.0,74.805,87.156,1.005,0.0,0.0,0,0,0,89.5,0,31.1,1.27,-0.0,1,0,3,0,0,0.0,False,1
+one-file,one-file,macos-bind,5,WAL,75,30.0,5.0,1672,0.571,6.353,15.752,33.855,2.218,0.0,0.0,74.975,86.516,1.0032,0.0,0.0,0,1029,0,92.3,0,31.2,1.24,-0.001,5,1,13,2,1,0.23077,False,2
+file-per-session,file-per-session,macos-bind,5,WAL,75,30.0,5.0,1672,4.42,7.113,12.646,19.0,4.593,0.0,0.0,74.996,86.254,1.0032,0.0,0.0,0,0,0,98.8,0,31.2,0.95,0.0,5,0,15,0,0,0.0,False,1
+one-file,one-file,macos-bind,10,WAL,75,30.0,5.0,3344,0.366,4.34,14.067,104.694,1.63,0.0003,0.0003,74.993,85.044,1.0032,0.0,121.6,0,2520,0,104.7,0,31.3,1.3,-0.0,10,1,10,2,0,0.2,False,1
+file-per-session,file-per-session,macos-bind,10,WAL,75,30.0,5.0,3342,3.399,5.332,9.752,21.452,3.555,0.0,0.0,75.0,84.701,1.0026,0.0,0.0,0,0,0,96.6,0,31.3,1.48,0.0,10,0,30,0,0,0.0,False,1
+one-file,one-file,macos-bind,20,WAL,75,30.0,5.0,6684,0.287,2.069,7.006,69.099,0.734,0.0,0.0,75.0,86.399,1.0026,0.0,196.6,0,6577,0,96.7,0,31.5,1.75,-0.0,20,1,34,2,3,0.14706,False,1
+file-per-session,file-per-session,macos-bind,20,WAL,75,30.0,5.0,6682,3.611,6.401,9.868,30.218,3.901,0.0,0.0,74.998,83.93,1.0023,0.0,0.0,0,0,0,99.7,0,31.5,1.81,0.0,20,0,60,0,0,0.0,False,1

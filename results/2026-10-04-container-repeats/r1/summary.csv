@@ -1,0 +1,4 @@
+mode,label,fs,n,journal,interval_ms,duration_s,warmup_s,flushes,write_p50_ms,write_p90_ms,write_p99_ms,write_max_ms,write_mean_ms,late75_frac,late_own_frac,gap_p50_ms,gap_p99_ms,rate_ratio,debt_p50_ms,debt_max_ms,locked_errors,corrupt_errors,other_errors,gap_max_ms,sync_stalls,wall_s,loadavg_1m,clock_drift_s,agents_reported,integrity_bad_dbs,suspect_pause,attempt
+one-file,one-file,container,20,WAL,75,30.0,5.0,6687,0.253,2.947,11.121,48.144,1.119,0.0,0.0,75.013,85.553,1.003,0.0,0.0,0,0,0,120.5,0,31.5,2.54,0.001,20,0,False,1
+one-file,one-file,container,50,WAL,75,30.0,5.0,16562,0.271,5.386,48.976,444.343,3.097,0.0058,0.0058,75.026,123.232,0.9937,189.9,586.3,0,0,0,444.4,0,32.1,4.34,0.001,50,0,False,1
+one-file,one-file,container,100,WAL,75,30.0,5.0,33265,1.689,6.532,43.279,1653.274,3.874,0.00508,0.00508,75.002,82.695,0.998,46.5,1627.5,0,0,0,1653.3,0,33.1,4.88,0.001,100,0,False,1

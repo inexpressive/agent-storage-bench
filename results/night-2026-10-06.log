@@ -1,0 +1,132 @@
+=== 2026-10-06 23:01:08 rmw container
+[     31s] container json-shared-rmw-none N=  2 p50=0.80 p99=8.41 max=138 late75=0.0030 rate=1.000 locked=0 corrupt=0 bad_db=0 err=0 gapmax=138 stalls=0 drift=0.0
+[     62s] container json-shared-rmw-excl N=  2 p50=1.63 p99=11.97 max=18 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=92 stalls=0 drift=-0.001
+[     93s] container json-shared-rmw-none N=  5 p50=1.09 p99=7.53 max=13 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=96 stalls=0 drift=0.001
+[    125s] container json-shared-rmw-excl N=  5 p50=1.33 p99=12.82 max=18 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=100 stalls=0 drift=-0.001
+[    156s] container json-shared-rmw-none N= 10 p50=0.85 p99=8.37 max=19 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=113 stalls=0 drift=0.0
+[    187s] container json-shared-rmw-excl N= 10 p50=1.11 p99=14.70 max=28 late75=0.0000 rate=1.002 locked=0 corrupt=0 bad_db=0 err=0 gapmax=100 stalls=0 drift=-0.0
+[    219s] container json-shared-rmw-none N= 20 p50=0.62 p99=9.43 max=29 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=102 stalls=0 drift=0.0
+[    250s] container json-shared-rmw-excl N= 20 p50=1.68 p99=22.28 max=63 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=106 stalls=0 drift=0.001
+[    282s] container json-shared-rmw-none N= 50 p50=0.47 p99=8.67 max=48 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=105 stalls=0 drift=-0.0
+[    315s] container json-shared-rmw-excl N= 50 p50=4.53 p99=40.26 max=114 late75=0.0004 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=114 stalls=0 drift=0.0
+done in 315s -> results/2026-10-06-container-rmw
+=== 2026-10-06 23:06:23 rmw bind
+[     31s] macos-bind json-shared-rmw-none N=  2 p50=5.32 p99=13.84 max=20 late75=0.0000 rate=1.005 locked=0 corrupt=0 bad_db=0 err=0 gapmax=91 stalls=0 drift=-0.0
+[     62s] macos-bind json-shared-rmw-excl N=  2 p50=8.10 p99=24.65 max=38 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=101 stalls=0 drift=0.0
+[     93s] macos-bind json-shared-rmw-none N=  5 p50=3.04 p99=9.29 max=36 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=92 stalls=0 drift=0.0
+[    125s] macos-bind json-shared-rmw-excl N=  5 p50=3.76 p99=13.98 max=32 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=103 stalls=0 drift=-0.0
+[    156s] macos-bind json-shared-rmw-none N= 10 p50=1.99 p99=6.39 max=38 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=83 stalls=0 drift=-0.0
+[    187s] macos-bind json-shared-rmw-excl N= 10 p50=2.50 p99=16.07 max=32 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=82 stalls=0 drift=0.0
+done in 187s -> results/2026-10-06-macos-bind-rmw
+=== 2026-10-06 23:09:30 silent bind r1
+[     31s] macos-bind one-file           N=  1 p50=6.63 p99=18.01 max=22 late75=0.0000 rate=1.005 locked=0 corrupt=0 bad_db=0 err=0 gapmax=88 stalls=0 drift=-0.0
+[     62s] macos-bind file-per-session   N=  1 p50=5.45 p99=15.19 max=17 late75=0.0000 rate=1.005 locked=0 corrupt=0 bad_db=0 err=0 gapmax=99 stalls=0 drift=0.0
+[     96s] macos-bind one-file           N=  5 p50=4.41 p99=22.74 max=10248 late75=0.0006 rate=0.941 locked=0 corrupt=76 bad_db=0 err=1 gapmax=93 stalls=0 drift=-0.0
+[    127s] macos-bind file-per-session   N=  5 p50=4.54 p99=14.17 max=23 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=96 stalls=0 drift=0.0
+[    159s] macos-bind one-file           N= 10 p50=3.22 p99=34.91 max=95 late75=0.0009 rate=1.003 locked=0 corrupt=270 bad_db=1 err=0 gapmax=105 stalls=0 drift=0.0
+[    190s] macos-bind file-per-session   N= 10 p50=3.55 p99=9.87 max=29 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=100 stalls=0 drift=-0.0
+[    222s] macos-bind one-file           N= 20 p50=0.28 p99=5.48 max=16 late75=0.0000 rate=1.004 locked=0 corrupt=6690 bad_db=0 err=0 gapmax=100 stalls=0 drift=-0.0
+[    253s] macos-bind file-per-session   N= 20 p50=3.47 p99=10.65 max=23 late75=0.0000 rate=1.002 locked=0 corrupt=0 bad_db=0 err=0 gapmax=94 stalls=0 drift=0.0
+done in 253s -> results/2026-10-06-macos-bind-silent/r1
+=== 2026-10-06 23:13:43 silent bind r2
+[     31s] macos-bind one-file           N=  1 p50=5.45 p99=17.72 max=20 late75=0.0000 rate=1.005 locked=0 corrupt=0 bad_db=0 err=0 gapmax=87 stalls=0 drift=-0.0
+[     62s] macos-bind file-per-session   N=  1 p50=5.60 p99=14.96 max=16 late75=0.0000 rate=1.005 locked=0 corrupt=0 bad_db=0 err=0 gapmax=89 stalls=0 drift=0.0
+[    103s] macos-bind one-file           N=  5 p50=4.09 p99=27.16 max=10476 late75=0.0006 rate=0.997 locked=0 corrupt=287 bad_db=1 err=1 gapmax=95 stalls=0 drift=-0.031
+[    134s] macos-bind file-per-session   N=  5 p50=4.44 p99=12.08 max=22 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=97 stalls=0 drift=-0.001
+[    166s] macos-bind one-file           N= 10 p50=3.04 p99=26.10 max=75 late75=0.0003 rate=1.003 locked=0 corrupt=369 bad_db=1 err=0 gapmax=102 stalls=0 drift=-0.0
+[    197s] macos-bind file-per-session   N= 10 p50=3.49 p99=9.55 max=19 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=90 stalls=0 drift=-0.0
+[    229s] macos-bind one-file           N= 20 p50=0.36 p99=35.21 max=256 late75=0.0026 rate=1.002 locked=0 corrupt=4986 bad_db=1 err=0 gapmax=256 stalls=0 drift=-0.0
+[    260s] macos-bind file-per-session   N= 20 p50=3.72 p99=9.96 max=16 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=98 stalls=0 drift=0.001
+done in 260s -> results/2026-10-06-macos-bind-silent/r2
+=== 2026-10-06 23:18:04 silent bind r3
+[     31s] macos-bind one-file           N=  1 p50=5.35 p99=14.44 max=18 late75=0.0000 rate=1.002 locked=0 corrupt=0 bad_db=0 err=0 gapmax=88 stalls=0 drift=-0.001
+[     62s] macos-bind file-per-session   N=  1 p50=5.28 p99=15.42 max=27 late75=0.0000 rate=1.005 locked=0 corrupt=0 bad_db=0 err=0 gapmax=90 stalls=0 drift=-0.0
+  ! one-file N=5: gap_max=10222 мс, drift=0.0 с — перезапуск
+[    125s] macos-bind one-file           N=  5 p50=0.57 p99=15.75 max=34 late75=0.0000 rate=1.003 locked=0 corrupt=1029 bad_db=1 err=0 gapmax=92 stalls=0 drift=-0.001
+[    156s] macos-bind file-per-session   N=  5 p50=4.42 p99=12.65 max=19 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=99 stalls=0 drift=0.0
+[    187s] macos-bind one-file           N= 10 p50=0.37 p99=14.07 max=105 late75=0.0003 rate=1.003 locked=0 corrupt=2520 bad_db=1 err=0 gapmax=105 stalls=0 drift=-0.0
+[    219s] macos-bind file-per-session   N= 10 p50=3.40 p99=9.75 max=21 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=97 stalls=0 drift=0.0
+[    250s] macos-bind one-file           N= 20 p50=0.29 p99=7.01 max=69 late75=0.0000 rate=1.003 locked=0 corrupt=6577 bad_db=1 err=0 gapmax=97 stalls=0 drift=-0.0
+[    282s] macos-bind file-per-session   N= 20 p50=3.61 p99=9.87 max=30 late75=0.0000 rate=1.002 locked=0 corrupt=0 bad_db=0 err=0 gapmax=100 stalls=0 drift=0.0
+done in 282s -> results/2026-10-06-macos-bind-silent/r3
+=== 2026-10-06 23:22:45 repeats container r1
+[     32s] container one-file           N= 20 p50=0.67 p99=14.98 max=46 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=106 stalls=0 drift=-0.0
+[     63s] container file-per-session   N= 20 p50=0.44 p99=7.70 max=24 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=104 stalls=0 drift=-0.0
+[     95s] container one-file           N= 50 p50=0.66 p99=23.80 max=147 late75=0.0004 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=147 stalls=0 drift=-0.0
+[    127s] container file-per-session   N= 50 p50=0.32 p99=7.57 max=41 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=110 stalls=0 drift=0.0
+[    161s] container one-file           N=100 p50=1.96 p99=40.70 max=944 late75=0.0045 rate=0.999 locked=0 corrupt=0 bad_db=0 err=0 gapmax=944 stalls=0 drift=-0.0
+[    194s] container file-per-session   N=100 p50=0.26 p99=9.05 max=110 late75=0.0009 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=115 stalls=0 drift=-0.0
+[    229s] container one-file           N=150 p50=2.39 p99=235.74 max=2983 late75=0.0412 rate=0.924 locked=0 corrupt=0 bad_db=0 err=0 gapmax=2983 stalls=0 drift=0.0
+[    263s] container file-per-session   N=150 p50=0.23 p99=18.78 max=206 late75=0.0034 rate=1.001 locked=0 corrupt=0 bad_db=0 err=0 gapmax=206 stalls=0 drift=-0.0
+[    299s] container one-file           N=200 p50=4.82 p99=842.44 max=4779 late75=0.1194 rate=0.731 locked=0 corrupt=0 bad_db=0 err=0 gapmax=4779 stalls=0 drift=0.0
+[    335s] container file-per-session   N=200 p50=0.23 p99=40.83 max=358 late75=0.0078 rate=0.995 locked=0 corrupt=0 bad_db=0 err=0 gapmax=358 stalls=0 drift=-0.001
+done in 335s -> results/2026-10-06-container-repeats/r1
+=== 2026-10-06 23:28:20 repeats container r2
+[     32s] container one-file           N= 20 p50=0.67 p99=14.01 max=125 late75=0.0001 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=125 stalls=0 drift=0.0
+[     63s] container file-per-session   N= 20 p50=0.44 p99=8.47 max=23 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=118 stalls=0 drift=-0.001
+[     95s] container one-file           N= 50 p50=1.73 p99=42.87 max=520 late75=0.0054 rate=0.994 locked=0 corrupt=0 bad_db=0 err=0 gapmax=520 stalls=0 drift=-0.081
+[    127s] container file-per-session   N= 50 p50=0.31 p99=7.40 max=59 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=137 stalls=0 drift=-0.0
+[    161s] container one-file           N=100 p50=1.94 p99=41.65 max=1446 late75=0.0049 rate=0.998 locked=0 corrupt=0 bad_db=0 err=0 gapmax=1446 stalls=0 drift=0.0
+[    194s] container file-per-session   N=100 p50=0.25 p99=7.74 max=35 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=106 stalls=0 drift=-0.001
+[    229s] container one-file           N=150 p50=2.48 p99=237.99 max=3565 late75=0.0473 rate=0.915 locked=0 corrupt=0 bad_db=0 err=0 gapmax=3565 stalls=0 drift=-0.0
+[    263s] container file-per-session   N=150 p50=0.24 p99=18.87 max=246 late75=0.0040 rate=0.998 locked=0 corrupt=0 bad_db=0 err=0 gapmax=246 stalls=0 drift=-0.0
+[    299s] container one-file           N=200 p50=4.67 p99=843.61 max=4073 late75=0.1092 rate=0.742 locked=0 corrupt=0 bad_db=0 err=0 gapmax=4073 stalls=0 drift=-0.0
+[    335s] container file-per-session   N=200 p50=0.23 p99=25.85 max=389 late75=0.0042 rate=0.997 locked=0 corrupt=0 bad_db=0 err=0 gapmax=389 stalls=0 drift=-0.001
+done in 335s -> results/2026-10-06-container-repeats/r2
+=== 2026-10-06 23:33:56 repeats container r3
+[     32s] container one-file           N= 20 p50=0.66 p99=15.07 max=126 late75=0.0001 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=126 stalls=0 drift=-0.001
+[     63s] container file-per-session   N= 20 p50=0.47 p99=7.00 max=23 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=100 stalls=0 drift=0.001
+[     95s] container one-file           N= 50 p50=0.64 p99=23.13 max=107 late75=0.0005 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=107 stalls=0 drift=-0.0
+[    127s] container file-per-session   N= 50 p50=0.35 p99=6.64 max=38 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=108 stalls=0 drift=-0.0
+[    161s] container one-file           N=100 p50=2.05 p99=58.87 max=1045 late75=0.0059 rate=0.999 locked=0 corrupt=0 bad_db=0 err=0 gapmax=1045 stalls=0 drift=-0.0
+[    194s] container file-per-session   N=100 p50=0.28 p99=7.41 max=72 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=108 stalls=0 drift=-0.001
+[    229s] container one-file           N=150 p50=3.38 p99=438.23 max=3262 late75=0.0646 rate=0.872 locked=0 corrupt=0 bad_db=0 err=0 gapmax=3262 stalls=0 drift=0.0
+[    264s] container file-per-session   N=150 p50=0.26 p99=17.85 max=171 late75=0.0031 rate=1.001 locked=0 corrupt=0 bad_db=0 err=0 gapmax=171 stalls=0 drift=-0.001
+[    300s] container one-file           N=200 p50=4.75 p99=843.48 max=4690 late75=0.1102 rate=0.740 locked=0 corrupt=0 bad_db=0 err=0 gapmax=4690 stalls=0 drift=0.0
+[    336s] container file-per-session   N=200 p50=0.23 p99=23.35 max=410 late75=0.0036 rate=0.995 locked=0 corrupt=0 bad_db=0 err=0 gapmax=410 stalls=1 drift=-0.0
+done in 336s -> results/2026-10-06-container-repeats/r3
+=== 2026-10-06 23:39:31 h4
+[     32s] container one-file-ac0       N= 20 p50=0.83 p99=19.20 max=76 late75=0.0001 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=105 stalls=0 drift=-0.0
+[     64s] container one-file-ac1000    N= 20 p50=0.66 p99=14.66 max=43 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=106 stalls=0 drift=-0.0
+[     95s] container one-file-ac10000   N= 20 p50=0.69 p99=14.79 max=107 late75=0.0001 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=107 stalls=0 drift=-0.0
+[    128s] container one-file-ac0       N= 50 p50=1.41 p99=64.70 max=965 late75=0.0088 rate=0.992 locked=0 corrupt=0 bad_db=0 err=0 gapmax=965 stalls=0 drift=-0.001
+[    160s] container one-file-ac1000    N= 50 p50=0.48 p99=22.77 max=142 late75=0.0004 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=154 stalls=0 drift=-0.0
+[    192s] container one-file-ac10000   N= 50 p50=0.85 p99=69.83 max=1534 late75=0.0095 rate=0.955 locked=0 corrupt=0 bad_db=0 err=0 gapmax=1534 stalls=1 drift=0.0
+[    226s] container one-file-ac0       N=100 p50=2.53 p99=238.21 max=1954 late75=0.0460 rate=0.925 locked=0 corrupt=0 bad_db=0 err=0 gapmax=2786 stalls=0 drift=-0.0
+[    260s] container one-file-ac1000    N=100 p50=1.99 p99=41.41 max=740 late75=0.0051 rate=0.999 locked=0 corrupt=0 bad_db=0 err=0 gapmax=740 stalls=0 drift=-0.0
+[    293s] container one-file-ac10000   N=100 p50=2.09 p99=87.74 max=1251 late75=0.0138 rate=0.987 locked=0 corrupt=0 bad_db=0 err=0 gapmax=1251 stalls=0 drift=-0.0
+done in 293s -> results/2026-10-06-container-h4
+kafka up
+=== 2026-10-06 23:44:28 h5 kafka
+[     33s] container event-log-kafka-a1-l0-each N= 20 p50=0.66 p99=2.94 max=11 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=82 stalls=0 drift=-0.0 | e2e p50=0.94 p99=8.98 max=27.1 drain=78.2 lagmax=7 state_bad=0 comp_ok=True ev/batch=1.15 commits=5791 busy=0.0404
+[     66s] container event-log-kafka-a1-l0-async N= 20 p50=0.17 p99=0.41 max=5 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=86 stalls=0 drift=0.023 | e2e p50=1.04 p99=11.26 max=19.6 drain=73.6 lagmax=8 state_bad=0 comp_ok=True ev/batch=1.15 commits=5812 busy=0.0487
+[    100s] container event-log-kafka-a1-l5-each N= 20 p50=0.77 p99=3.72 max=24 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=96 stalls=0 drift=0.005 | e2e p50=1.07 p99=11.05 max=77.5 drain=73.4 lagmax=7 state_bad=0 comp_ok=True ev/batch=1.13 commits=5923 busy=0.0548
+[    133s] container event-log-kafka-a1-l5-async N= 20 p50=0.18 p99=0.47 max=3 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=122 stalls=0 drift=0.001 | e2e p50=7.09 p99=18.64 max=68.1 drain=73.5 lagmax=8 state_bad=0 comp_ok=True ev/batch=1.16 commits=5727 busy=0.0542
+[    166s] container event-log-kafka-aall-l0-each N= 20 p50=0.78 p99=4.06 max=17 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=92 stalls=0 drift=-0.002 | e2e p50=1.08 p99=11.27 max=19.1 drain=73.3 lagmax=6 state_bad=0 comp_ok=True ev/batch=1.16 commits=5732 busy=0.0532
+[    199s] container event-log-kafka-aall-l0-async N= 20 p50=0.18 p99=0.51 max=4 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=102 stalls=0 drift=0.001 | e2e p50=1.06 p99=11.19 max=46.8 drain=73.2 lagmax=8 state_bad=0 comp_ok=True ev/batch=1.13 commits=5873 busy=0.0579
+[    232s] container event-log-kafka-aall-l5-each N= 20 p50=0.77 p99=4.02 max=36 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=98 stalls=0 drift=0.0 | e2e p50=1.09 p99=11.53 max=36.2 drain=73.0 lagmax=8 state_bad=0 comp_ok=True ev/batch=1.2 commits=5542 busy=0.0531
+[    265s] container event-log-kafka-aall-l5-async N= 20 p50=0.19 p99=0.59 max=7 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=94 stalls=0 drift=-0.0 | e2e p50=7.13 p99=19.35 max=31.1 drain=73.2 lagmax=8 state_bad=0 comp_ok=True ev/batch=1.21 commits=5517 busy=0.0561
+[    302s] container event-log-kafka-a1-l0-each N=100 p50=0.40 p99=3.23 max=96 late75=0.0004 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=115 stalls=0 drift=-0.001 | e2e p50=0.61 p99=82.25 max=186.1 drain=84.1 lagmax=35 state_bad=0 comp_ok=True ev/batch=1.48 commits=22570 busy=0.1779
+[    339s] container event-log-kafka-a1-l0-async N=100 p50=0.09 p99=0.26 max=27 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=97 stalls=0 drift=0.0 | e2e p50=0.62 p99=45.73 max=166.3 drain=127.1 lagmax=42 state_bad=0 comp_ok=True ev/batch=1.46 commits=22846 busy=0.1805
+[    376s] container event-log-kafka-a1-l5-each N=100 p50=0.39 p99=2.94 max=29 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=79 stalls=0 drift=-0.0 | e2e p50=0.61 p99=43.33 max=147.2 drain=93.0 lagmax=38 state_bad=0 comp_ok=True ev/batch=1.42 commits=23460 busy=0.1855
+[    413s] container event-log-kafka-a1-l5-async N=100 p50=0.09 p99=0.30 max=13 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=95 stalls=0 drift=-0.001 | e2e p50=6.54 p99=102.4 max=214.7 drain=143.5 lagmax=222 state_bad=0 comp_ok=True ev/batch=1.48 commits=22449 busy=0.1837
+[    450s] container event-log-kafka-aall-l0-each N=100 p50=0.42 p99=4.62 max=78 late75=0.0001 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=83 stalls=0 drift=0.0 | e2e p50=0.64 p99=50.63 max=182.7 drain=89.1 lagmax=42 state_bad=0 comp_ok=True ev/batch=1.45 commits=22916 busy=0.1743
+[    487s] container event-log-kafka-aall-l0-async N=100 p50=0.09 p99=0.28 max=154 late75=0.0009 rate=1.002 locked=0 corrupt=0 bad_db=0 err=0 gapmax=212 stalls=0 drift=-0.0 | e2e p50=0.65 p99=87.55 max=277.4 drain=94.0 lagmax=267 state_bad=0 comp_ok=True ev/batch=1.61 commits=20656 busy=0.1772
+[    524s] container event-log-kafka-aall-l5-each N=100 p50=0.42 p99=16.76 max=75 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=93 stalls=0 drift=-0.0 | e2e p50=0.63 p99=124.43 max=261.2 drain=100.7 lagmax=238 state_bad=0 comp_ok=True ev/batch=1.46 commits=22752 busy=0.1858
+[    561s] container event-log-kafka-aall-l5-async N=100 p50=0.09 p99=0.24 max=3 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=89 stalls=0 drift=-0.0 | e2e p50=6.54 p99=63.92 max=149.9 drain=104.4 lagmax=165 state_bad=0 comp_ok=True ev/batch=1.52 commits=21982 busy=0.1883
+[    602s] container event-log-kafka-a1-l0-each N=200 p50=0.62 p99=21.71 max=162 late75=0.0040 rate=1.001 locked=0 corrupt=0 bad_db=0 err=0 gapmax=162 stalls=0 drift=-0.0 | e2e p50=7.12 p99=170.62 max=337.2 drain=213.9 lagmax=551 state_bad=0 comp_ok=True ev/batch=5.28 commits=12608 busy=0.3716
+[    644s] container event-log-kafka-a1-l0-async N=200 p50=0.09 p99=0.53 max=43 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=112 stalls=0 drift=-0.0 | e2e p50=0.97 p99=184.41 max=287.1 drain=321.0 lagmax=624 state_bad=0 comp_ok=True ev/batch=2.51 commits=26515 busy=0.4046
+[    685s] container event-log-kafka-a1-l5-each N=200 p50=0.47 p99=18.23 max=124 late75=0.0010 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=98 stalls=0 drift=-0.0 | e2e p50=1.21 p99=163.94 max=277.2 drain=236.6 lagmax=598 state_bad=0 comp_ok=True ev/batch=2.81 commits=23759 busy=0.4154
+[    727s] container event-log-kafka-a1-l5-async N=200 p50=0.09 p99=0.51 max=149 late75=0.0007 rate=1.002 locked=0 corrupt=0 bad_db=0 err=0 gapmax=203 stalls=0 drift=-0.0 | e2e p50=7.57 p99=244.75 max=451.5 drain=240.1 lagmax=791 state_bad=0 comp_ok=True ev/batch=3.25 commits=20501 busy=0.3957
+[    768s] container event-log-kafka-aall-l0-each N=200 p50=0.54 p99=22.95 max=142 late75=0.0030 rate=1.001 locked=0 corrupt=0 bad_db=0 err=0 gapmax=142 stalls=0 drift=-0.0 | e2e p50=2.29 p99=155.33 max=247.5 drain=241.8 lagmax=449 state_bad=0 comp_ok=True ev/batch=3.6 commits=18465 busy=0.3849
+[    810s] container event-log-kafka-aall-l0-async N=200 p50=0.09 p99=0.51 max=54 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=114 stalls=0 drift=-0.001 | e2e p50=0.96 p99=233.99 max=322.1 drain=190.6 lagmax=709 state_bad=0 comp_ok=True ev/batch=2.59 commits=25745 busy=0.3921
+[    851s] container event-log-kafka-aall-l5-each N=200 p50=0.53 p99=52.62 max=180 late75=0.0074 rate=1.000 locked=0 corrupt=0 bad_db=0 err=0 gapmax=172 stalls=0 drift=-0.0 | e2e p50=1.94 p99=233.96 max=371.9 drain=244.2 lagmax=666 state_bad=0 comp_ok=True ev/batch=3.61 commits=18402 busy=0.3856
+[    893s] container event-log-kafka-aall-l5-async N=200 p50=0.09 p99=1.18 max=263 late75=0.0017 rate=0.999 locked=0 corrupt=0 bad_db=0 err=0 gapmax=315 stalls=0 drift=-0.0 | e2e p50=7.63 p99=348.86 max=545.2 drain=273.5 lagmax=1014 state_bad=0 comp_ok=True ev/batch=3.26 commits=20355 busy=0.4053
+done in 893s -> results/2026-10-06-container-h5-kafka
+PONG
+=== 2026-10-06 23:59:22 h5 redis
+[     33s] container event-log-redis    N= 20 p50=0.68 p99=6.05 max=32 late75=0.0000 rate=1.004 locked=0 corrupt=0 bad_db=0 err=0 gapmax=103 stalls=0 drift=-0.001 | e2e p50=1.3 p99=13.5 max=31.0 drain=83.1 lagmax=11 state_bad=0 comp_ok=True ev/batch=1.33 commits=5011 busy=0.0617
+[     70s] container event-log-redis    N=100 p50=0.28 p99=1.30 max=55 late75=0.0000 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=134 stalls=0 drift=0.01 | e2e p50=0.69 p99=12.78 max=44.5 drain=160.8 lagmax=28 state_bad=0 comp_ok=True ev/batch=1.54 commits=21584 busy=0.1771
+[    112s] container event-log-redis    N=200 p50=0.27 p99=1.75 max=150 late75=0.0010 rate=1.003 locked=0 corrupt=0 bad_db=0 err=0 gapmax=108 stalls=0 drift=0.014 | e2e p50=1.04 p99=21.89 max=38.4 drain=258.7 lagmax=39 state_bad=0 comp_ok=True ev/batch=2.73 commits=24385 busy=0.342
+done in 112s -> results/2026-10-06-container-h5-redis
+=== 2026-10-07 00:01:14 done
