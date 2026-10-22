@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Ночной прогон этапа 3 к докладу (6→7.10). ~1,5 ч. Лог — results/night-2026-10-06.log.
 # Запуск: nohup ./night-2026-10-06.sh &   Мак не должен спать (caffeinate -i).
+# Запись прогона на конкретном маке (Docker Desktop + папка macOS), не переносимый скрипт; см. README.
 set -uo pipefail
 cd "$(dirname "$0")"
 C=~/bench-state/tmp; B=./tmp-db; PY=~/bench-tools/env/bin/python
