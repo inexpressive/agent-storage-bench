@@ -363,7 +363,6 @@ page = f"""<!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Один файл, много агентов</title>
 <style>{CSS}</style></head><body><main>
 <h1>Один файл, много агентов</h1>
-<p class="sub">Бонус к докладу ITMO OpenSource · этапы 1–2 · прогон 04.10.2026 · синтетика по шаблону записи из кода OpenResearch и OpenScience</p>
 
 <div class="hero">
 <div><b>5 агентов</b><span>и общая SQLite в WAL на папке мака портится: 58–98% записей «database disk image is malformed»</span></div>
