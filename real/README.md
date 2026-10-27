@@ -9,11 +9,19 @@
 
 Клонировать в `~/bench-real-src` (или задать путь `BENCH_REAL_SRC`):
 
-| Каталог | Репозиторий | Коммит |
-|---|---|---|
-| `OpenResearch` | https://github.com/alphaXiv/OpenResearch | `b9ce4f3` |
-| `OpenScience` | https://github.com/synthetic-sciences/OpenScience | `44d0334` |
-| `tinyagents` | https://github.com/tinyhumansai/tinyagents | `2eb9148e` |
+| Каталог | Репозиторий | Коммит | Лицензия |
+|---|---|---|---|
+| `OpenResearch` | https://github.com/alphaXiv/OpenResearch | `b9ce4f3` | MIT |
+| `OpenScience` | https://github.com/synthetic-sciences/OpenScience | `44d0334` | Apache-2.0 |
+| `tinyagents` | https://github.com/tinyhumansai/tinyagents | `2eb9148e` | GPL-3.0-only |
+
+Обвязки (`*_bench_real.rs`, `openscience_agent.ts`) вызывают API хранилища сред и
+не копируют их код. Собранный с ними тестовый бинарник — производная от исходника
+среды и подчиняется её лицензии (для `tinyagents` — GPL-3.0); бинарники в репозиторий
+не входят.
+
+Версии Rust и bun на замере 07.10 не записаны; минимум по исходникам — Rust 1.88
+у `tinyagents`, `bun@1.3.14` у OpenScience (`packageManager`).
 
 ## Установка обвязок
 
@@ -31,6 +39,8 @@
   путь к бинарнику (`target/release/deps/bench_real-<hash>`) — в `OH_TEST_BIN`.
 
 ## Запуск
+
+Из папки `real/`:
 
 ```bash
 export OR_TEST_BIN=… OH_TEST_BIN=…

@@ -25,7 +25,6 @@ import csv
 import datetime
 import json
 import os
-import shutil
 import time
 
 from bench import run_point
@@ -155,9 +154,7 @@ def main():
                 w = csv.DictWriter(f, fieldnames=fields)
                 w.writeheader()
                 w.writerows(rows)
-    # Тестовые базы не оставляем.
-    for name in os.listdir(workdir):
-        shutil.rmtree(os.path.join(workdir, name), ignore_errors=True)
+    # Каталог точки удаляет сам run_point; чужое в --dir не трогаем.
     print(f"done in {time.time()-t0:.0f}s -> {out}", flush=True)
 
 
